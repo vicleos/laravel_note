@@ -79,3 +79,22 @@ $ ./bin/elasticsearch-plugin list
 analysis-ik
 ```
 如果出现 analysis-ik，证明 ik 已经安装。
+
+# 配置 `config/scout.php` 参数信息
+
+```
+...
+  'driver' => env('SCOUT_DRIVER', 'elasticsearch'),
+...
+  'elasticsearch' => [
+      'index' => env('ELASTICSEARCH_INDEX', 'jkg'),
+      'config' => [
+          'hosts' => [
+              //如果在服务端 Es 启用了 sheild 验证，需要填写认证信息(默认用户名 elastic 密码 changeme )
+              //env('ELASTICSEARCH_HOST', 'http://elastic:changeme@127.0.0.1'),
+              //没开启 sheild 验证，则只填写服务端 Es 地址即可
+              env('ELASTICSEARCH_HOST', 'http://127.0.0.1'),
+          ],
+      ]
+  ],
+```
