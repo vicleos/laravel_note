@@ -246,5 +246,43 @@ class Article extends Model
 }
 ```
 
+# 数据导入到 elasticsearch 中
 
+现在我们要将 artile 表中的数据，用 `scout:import` 命令插入到 elasticsearch 中，执行：
+```bash
+$php artisan scout:import "App\Models\Content\Article"
+执行结果：
+Imported [App\Models\Content\Article] models up to ID: 425
+Imported [App\Models\Content\Article] models up to ID: 545
+Imported [App\Models\Content\Article] models up to ID: 648
+Imported [App\Models\Content\Article] models up to ID: 814
+Imported [App\Models\Content\Article] models up to ID: 914
+Imported [App\Models\Content\Article] models up to ID: 1024
+Imported [App\Models\Content\Article] models up to ID: 1171
+Imported [App\Models\Content\Article] models up to ID: 1288
+All [App\Models\Content\Article] records have been imported.
+```
+# 在控制器中搜索 article 数据
 
+```php
+use Illuminate\Http\Request;
+...
+public function query(Request $request)
+{
+    $q = $request->get('q');
+    $paginator = [];
+    if ($q) {
+        $paginator = Article::search($q)->paginate();
+    }
+    // dd($paginator);
+    $total = $paginator->total();
+    echo "<p>总条数:{$total}</p>";
+    foreach ($paginator as $item) {
+      echo "<p>+==========================</p>";
+      //这里简单的用 preg_replace 实现关键字高亮
+      $newString = preg_replace("/$q/i", "<font color=red><b>$q</b></font>", $item->intro);
+      echo "<p>".$newString."</p>";
+    }
+    // dd($paginator);
+}
+```
