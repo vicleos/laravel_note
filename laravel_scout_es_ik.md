@@ -297,8 +297,8 @@ public function query(Request $request)
 }
 ```
 
-参考文档:
+#### 参考文档:
 
-[[教程一] 写一个搜索：使用 Laravel Scout，Elasticsearch，ik 分词] https://laravel-china.org/articles/4027/tutorial-write-a-search-use-laravel-scout-elasticsearch-ik-word-segmentation
-[Install Elasticsearch on Laravel Homestead] https://bosnadev.com/2014/09/12/install-elasticsearch-on-laravel-homestead/
-[Laravel 以ElasticSearch的方式使用scout] http://blog.csdn.net/i6448038/article/details/52710474
+- [[教程一] 写一个搜索：使用 Laravel Scout，Elasticsearch，ik 分词] https://laravel-china.org/articles/4027/tutorial-write-a-search-use-laravel-scout-elasticsearch-ik-word-segmentation
+- [Install Elasticsearch on Laravel Homestead] https://bosnadev.com/2014/09/12/install-elasticsearch-on-laravel-homestead/
+- [Laravel 以ElasticSearch的方式使用scout] http://blog.csdn.net/i6448038/article/details/52710474
