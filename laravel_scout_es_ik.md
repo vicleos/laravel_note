@@ -51,7 +51,17 @@ ScoutEngines\Elasticsearch\ElasticsearchProvider::class
 
 当前的版本是 Elasticsearch 5.1.1，ik 插件也是直接自带了。
 
-安装好 ElasticSearch，跑起来服务，测试服务安装是否正确：
+安装好 ElasticSearch，启动该服务
+
+```bash
+cd xxx/elasticsearch-rtf/bin
+//如果启动不正常，可以使用 `-vvv` 查看启动流程中是否出现错误
+//./elasticsearch -vvv
+//后台运行
+./elasticsearch -d
+```
+
+测试服务安装是否正确：
 
 ```bash
 $ curl http://localhost:9200
