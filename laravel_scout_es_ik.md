@@ -99,3 +99,123 @@ analysis-ik
       ]
   ],
 ```
+
+# 客户端初始化 Es 索引和模版参数
+
+创建新的命令行用来执行初始化
+
+```
+$ php artisan make:command InitHelloEs
+```
+修改生成的命令行类
+```php
+<?php
+
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+use GuzzleHttp\Client;
+
+class InitHelloEs extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'es:init';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Init es to create index';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        $client = new Client();
+        $this->createTemplate($client);
+        $this->createIndex($client);
+    }
+
+    protected function createIndex(Client $client)
+    {
+        var_dump('do createIndex');
+        var_dump(config('scout.elasticsearch.config.hosts'))[0];
+        $url = config('scout.elasticsearch.config.hosts')[0] . ':9200/' . config('scout.elasticsearch.index');
+        $client->put($url, [
+            'json' => [
+                'settings' => [
+                    'refresh_interval' => '5s',
+                    'number_of_shards' => 1,
+                    'number_of_replicas' => 0,
+                ],
+                'mappings' => [
+                    '_default_' => [
+                        '_all' => [
+                            'enabled' => false
+                        ]
+                    ]
+                ]
+            ]
+        ]);
+    }
+
+    protected function createTemplate(Client $client)
+    {
+        var_dump('do createTemplate');
+        var_dump(config('scout.elasticsearch.config.hosts'));
+        $url = config('scout.elasticsearch.config.hosts')[0] . ':9200/' . '_template/rtf';
+        $rst = $client->put($url, [
+            'json' => [
+                'template' => '*',
+                'settings' => [
+                    'number_of_shards' => 1
+                ],
+                'mappings' => [
+                    '_default_' => [
+                        '_all' => [
+                            'enabled' => true
+                        ],
+                        'dynamic_templates' => [
+                            [
+                                'strings' => [
+                                    'match_mapping_type' => 'string',
+                                    'mapping' => [
+                                        'type' => 'text',
+                                        'analyzer' => 'ik_smart',
+                                        'ignore_above' => 256,
+                                        'fields' => [
+                                            'keyword' => [
+                                                'type' => 'keyword'
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]);
+        var_dump($rst);
+    }
+}
+
+```
