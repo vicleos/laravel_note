@@ -82,7 +82,7 @@ analysis-ik
 
 # 配置 `config/scout.php` 参数信息
 
-```
+```php
 ...
   'driver' => env('SCOUT_DRIVER', 'elasticsearch'),
 ...
@@ -114,14 +114,14 @@ $ php artisan make:command InitHelloEs
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+//使用 GuzzleHttp 请求组件
 use GuzzleHttp\Client;
 
 class InitHelloEs extends Command
 {
     /**
      * The name and signature of the console command.
-     *
-     * @var string
+     * @var string
      */
     protected $signature = 'es:init';
 
