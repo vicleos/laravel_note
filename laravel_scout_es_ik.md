@@ -234,8 +234,7 @@ class Article extends Model
   use Searchable;
   ...
   /**
-   * es 搜索方法
-   * @return [type] [description]
+   * 搜索方法
    */
   public function toSearchableArray()
   {
