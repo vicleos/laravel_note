@@ -7,7 +7,7 @@ b.系统可用内存>2G
 # 第一步.linux安装jdk8
 
 
-```
+```bash
 sudo apt-get install openjdk-8-jre
 ```
 - 参考：http://openjdk.java.net/install/index.html
@@ -29,7 +29,7 @@ composer require tamayo/laravel-scout-elastic
 
 安装这个包的时候，顺便就会装好 Laravel Scout，我们 publish 一下 config
 
-```
+```bash
 $ php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
 ```
 
@@ -37,7 +37,7 @@ $ php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
 
 具体位置在 `/config/app.php` 中的 `providers` 数组中
 
-```
+```php
 ...
 Laravel\Scout\ScoutServiceProvider::class,
 ScoutEngines\Elasticsearch\ElasticsearchProvider::class
@@ -53,10 +53,10 @@ ScoutEngines\Elasticsearch\ElasticsearchProvider::class
 
 安装好 ElasticSearch，跑起来服务，测试服务安装是否正确：
 
-```
+```bash
 $ curl http://localhost:9200
 ```
-```
+```bash
 {
   "name" : "Rkx3vzo",
   "cluster_name" : "elasticsearch",
@@ -74,7 +74,7 @@ $ curl http://localhost:9200
 如果正确的打印以上信息，证明 ElasticSearch 已经安装好了。
 
 接着你需要查看一下 ik 插件是否安装（请在你的 ElasticSearch 文件夹中执行）：
-```
+```bash
 $ ./bin/elasticsearch-plugin list
 analysis-ik
 ```
@@ -107,7 +107,7 @@ analysis-ik
 
 创建新的命令行用来执行初始化
 
-```
+```bash
 $ php artisan make:command InitHelloEs
 ```
 修改生成的命令行类
