@@ -101,6 +101,9 @@ analysis-ik
 ```
 
 # 客户端初始化 Es 索引和模版参数
+### 参考文档：
+- 如何创建索引：https://www.elastic.co/guide/cn/elasticsearch/guide/current/_creating_an_index.html
+- 索引模版：https://www.elastic.co/guide/cn/elasticsearch/guide/current/index-templates.html
 
 创建新的命令行用来执行初始化
 
