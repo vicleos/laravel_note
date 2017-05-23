@@ -91,6 +91,7 @@ analysis-ik
       'config' => [
           'hosts' => [
               //如果在服务端 Es 启用了 sheild 验证，需要填写认证信息(默认用户名 elastic 密码 changeme )
+              //参考：https://www.elastic.co/guide/en/elasticsearch/client/php-api/master/_security.html
               //env('ELASTICSEARCH_HOST', 'http://elastic:changeme@127.0.0.1'),
               //没开启 sheild 验证，则只填写服务端 Es 地址即可
               env('ELASTICSEARCH_HOST', 'http://127.0.0.1'),
