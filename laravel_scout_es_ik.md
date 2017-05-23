@@ -1,5 +1,9 @@
 #使用 Laravel Scout，Elasticsearch，ik 分词组建自己的搜索框架
-
+### 必要条件：
+```
+a.JDK8+  
+b.系统可用内存>2G 
+```
 # 第一步.linux安装jdk8
 
 
