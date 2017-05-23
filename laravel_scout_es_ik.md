@@ -222,3 +222,30 @@ class InitHelloEs extends Command
 }
 
 ```
+# 在 Model 中启用 Es 搜索
+
+```php
+...
+use Laravel\Scout\Searchable;
+
+class Article extends Model
+{
+  ...
+  use Searchable;
+  ...
+  /**
+   * es 搜索方法
+   * @return [type] [description]
+   */
+  public function toSearchableArray()
+  {
+      //对应的字段
+      return [
+          'intro' => $this->intro
+      ];
+  }
+}
+```
+
+
+
