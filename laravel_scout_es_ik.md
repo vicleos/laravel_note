@@ -1,5 +1,4 @@
-#使用 Laravel Scout，Elasticsearch，ik 分词
-利用上述组建自己的搜索框架
+#使用 Laravel Scout，Elasticsearch，ik 分词组建自己的搜索框架
 
 # 第一步.linux安装jdk8
 
