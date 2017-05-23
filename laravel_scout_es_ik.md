@@ -41,4 +41,37 @@ ScoutEngines\Elasticsearch\ElasticsearchProvider::class
 ```
 # 第三步：安装 ElasticSearch
 
+因为我们要使用 ik 插件，在安装这个插件的时候，如果自己想办法安装这个插件会浪费你很多精力。
 
+所以我们直接使用项目： https://github.com/medcl/elasticsearch-rtf
+
+当前的版本是 Elasticsearch 5.1.1，ik 插件也是直接自带了。
+
+安装好 ElasticSearch，跑起来服务，测试服务安装是否正确：
+
+```
+$ curl http://localhost:9200
+```
+```
+{
+  "name" : "Rkx3vzo",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "Ww9KIfqSRA-9qnmj1TcnHQ",
+  "version" : {
+    "number" : "5.1.1",
+    "build_hash" : "5395e21",
+    "build_date" : "2016-12-06T12:36:15.409Z",
+    "build_snapshot" : false,
+    "lucene_version" : "6.3.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
+如果正确的打印以上信息，证明 ElasticSearch 已经安装好了。
+
+接着你需要查看一下 ik 插件是否安装（请在你的 ElasticSearch 文件夹中执行）：
+```
+$ ./bin/elasticsearch-plugin list
+analysis-ik
+```
+如果出现 analysis-ik，证明 ik 已经安装。
