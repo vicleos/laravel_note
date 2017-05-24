@@ -33,16 +33,16 @@ post('/auth', params).then(data => {
 ```php
 /**
  * 检查签名相关数据是否合法
- * 签名 sign 生成规则 : 客户端 md5(api_token + timestamp + 'XKey')
+ * 签名 sign 生成规则 : 客户端 md5(token + timestamp + 'XKey')
  * 单次请求的有效期为 timestamp + 360s
  * @return [type] [description]
  */
-public function checkSignData($apiToken = '')
+public function checkSignData($token = '')
 {
     //检查签名时间戳是否在有效期内
     $isTimeOut = $this->timestamp + 360 < time();
     //通过加密后的合成参数与签名对比，检查数据一致性
-    $paramsIsValid = strtoupper(md5($apiToken.$this->timestamp.'XKey')) === $this->sign;
+    $paramsIsValid = strtoupper(md5($token.$this->timestamp.'XKey')) === $this->sign;
 
     if(!$isTimeOut && $paramsIsValid){
         return true;
