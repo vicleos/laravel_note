@@ -3,7 +3,8 @@
 #### 客户端请求方式及签名参数组成方式
 
 以小程序中的 JS 请求作为例子：
-// `md5.js` 代码参考：- https://github.com/vicleos/laravel_note/blob/master/wxxcx/js/md5.js
+
+- `md5.js`代码 [https://github.com/vicleos/laravel_note/blob/master/wxxcx/js/md5.js]
 
 ```javascript
 ...
