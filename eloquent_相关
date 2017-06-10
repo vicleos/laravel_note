@@ -1,0 +1,17 @@
+
+Eloquent model 操作方法文件：
+E:\code\www\kgv5\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php
+在此文件中包含model的大部分方法 如：find
+
+```php
+    public function find($id, $columns = ['*'])
+    {
+        if (is_array($id)) {
+            return $this->findMany($id, $columns);
+        }
+
+        $this->query->where($this->model->getQualifiedKeyName(), '=', $id);
+
+        return $this->first($columns);
+    }
+```
