@@ -23,7 +23,10 @@ key 以bind或catch开头，然后跟上事件的类型，如bindtap, catchtouch
 value 是一个字符串，需要在对应的 Page 中定义同名的函数。不然当触发事件的时候会报错。
 bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡。
 
-如在下边这个例子中，点击 inner view 会先后触发handleTap3和handleTap2(因为tap事件会冒泡到 middle view，而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，点击 middle view 会触发handleTap2，点击 outter view 会触发handleTap1。
+如在下边这个例子中，点击 inner view 会先后触发handleTap3和handleTap2(因为tap事件会冒泡到 middle view，
+而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，
+点击 middle view 会触发handleTap2，
+点击 outter view 会触发handleTap1。
 
 ```
 
