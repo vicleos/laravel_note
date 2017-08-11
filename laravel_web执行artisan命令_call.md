@@ -10,4 +10,6 @@ public function doArtisan(Request $rq){
 ```
 
 - 备注：
-Artisan::call() 方法来自于文件 vendor\laravel\framework\src\Illuminate\Console\Command.php
+- Artisan::call() 和 Artisan::output() 方法均来自于文件 vendor\laravel\framework\src\Illuminate\Console\Application.php
+
+- Artisan::output() 获取最后一次执行命令的输出信息
