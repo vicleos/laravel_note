@@ -2,10 +2,10 @@
 
 - 在正常开发中难免会出现失误嵌套的情况。如何解决呢？
 
-- laravel/lumen框架使用了mysql的SAVEPOINT方法来解决这一问题。
+- `laravel` 框架使用了 `mysql` 的 `SAVEPOINT` 方法来解决这一问题。
 
-- mysql savepoint
-- 首先来看下mysql原生案例。
+- `mysql savepoint`
+- 首先来看下mysql原生案例：
 
 ```bash
 # 表结构
@@ -17,7 +17,7 @@
 | password | varchar(32)      | NO   |     | NULL    |                |
 +----------+------------------+------+-----+---------+----------------+
 ```
-2次开启事务案例
+- 2次开启事务案例 ：
 ```bash
 # 操作
 mysql> begin;       # 开启事务
@@ -35,7 +35,7 @@ Query OK, 1 row affected (0.00 sec)
 mysql> rollback;    # 事务回滚，把username=ee回滚掉了，而ff已插入数据库。
 Query OK, 0 rows affected (0.00 sec)
 ```
-- savepoint 案例
+- savepoint 案例：
 ```bash
 mysql> begin;                   # 开启事务
 Query OK, 0 rows affected (0.00 sec)
