@@ -100,8 +100,7 @@ Query OK, 0 rows affected (0.00 sec)
 ```
 > ↑ 开启事务时检测当前transactions等级，如果等于1开启事务，如果大于1则创建相应level的savepoint。
 > 在第一次使用 `beginTransaction` 时，$this->transactions 为默认值 0，当执行完 pdo 的 beginTransaction 后，
-> 这时就执行了 `++$this->transactions` , 此时 $this->transactions 变为 1，
-> 当第 2 个 beginTransaction 方法执行时
+> 这时就执行了 `++$this->transactions` , 此时 $this->transactions 变为 1，后续会依次加 1
 ```php
     /**
      * Commit the active database transaction.
