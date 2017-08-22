@@ -18,8 +18,8 @@ server
             rewrite ^/(.*)$ /index.php?_url=/$1;
         }
         
-        # 设置跨域相关头信息
-        add_header Access-Control-Allow-Origin *;
+        # 设置跨域相关头信息 Origin 可以设置为 * 或者 http://xxx.com
+        add_header Access-Control-Allow-Origin http://xxx111.xxxx.com;
         add_header Access-Control-Allow-Headers X-Requested-With;
         add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
         # end
