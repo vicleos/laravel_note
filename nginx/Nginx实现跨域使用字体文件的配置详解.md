@@ -6,9 +6,10 @@
 - 通过Nginx模块Http_Headers_Module来添加Access-Control-Allow-Origin允许的地址
 
 - 修改 `vhost` 中的 `xxx.conf`文件内容，添加下面的内容：
+- `指定域名： add_header Access-Control-Allow-Origin http://xxx.xxx.com;`
 ```bash
 location ~* \.(eot|ttf|woff|svg|otf)$ {
-  add_header Access-Control-Allow-Origin *;// 或者 add_header Access-Control-Allow-Origin http://xxx.xxx.com;
+  add_header Access-Control-Allow-Origin *;
   add_header Access-Control-Allow-Headers X-Requested-With;
   add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
 }
