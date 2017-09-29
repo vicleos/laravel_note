@@ -26,3 +26,12 @@ app.listen(3066);
 ...
 ```
 - 再次 `node app.js`
+
+- 通过node启动程序，每次代码修改都需要重新启动。 有一个工具supervisor，每次修改代码后会自动重启，会我们开发省很多的时间。
+```bash
+sudo npm install -g supervisor
+```
+- 再次启动
+```bash
+supervisor app.js
+```
