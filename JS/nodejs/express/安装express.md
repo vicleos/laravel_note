@@ -6,6 +6,10 @@ express -e nodejs-demo
 cd nodejs-demo
 sudo npm install
 ```
+- 如果不存在 `express` 命令，则需要安装相关依赖
+```bash
+sudo npm install -g express-generator
+```
 - 启动express
 ```bash
 node app.js
