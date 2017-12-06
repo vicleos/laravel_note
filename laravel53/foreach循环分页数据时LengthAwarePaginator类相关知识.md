@@ -41,6 +41,11 @@ LengthAwarePaginator {#1318 ▼
 
 - 到这里应该恍然大悟了哟 XD
 
+#### [知识点]
+> foreach 语句。默认情况下，所有可见属性都将被用于遍历。
+> 更进一步，可以实现 Iterator 接口。可以让对象自行决定如何遍历以及每次遍历时那些值可用。
+> 用 IteratorAggregate 接口以替代实现所有的 Iterator 方法。IteratorAggregate 只需要实现一个方法 IteratorAggregate::getIterator()，其应返回一个实现了 Iterator 的类的实例。
+
 #### [相关类文件位置]
 - LengthAwarePaginator | \xxx\web\vendor\laravel\framework\src\Illuminate\Pagination\LengthAwarePaginator.php
 - AbstractPaginator | \xxx\vendor\laravel\framework\src\Illuminate\Pagination\AbstractPaginator.php
