@@ -24,7 +24,7 @@ LengthAwarePaginator {#1318 ▼
 #### 这是为什么呢？如何实现的呢？
 - 其实就是 `AbstractPaginator` 类中的 `getIterator` 方法实现的
 - `AbstractPaginator` 这个类(抽象类)从哪调用的呢？
-- 答案时 `LengthAwarePaginator` 类继承的 `AbstractPaginator`，并且 `implements` 了 `IteratorAggregate` 等众多接口
+- 答案是 `LengthAwarePaginator` 类继承的 `AbstractPaginator`，并且 `implements` 了 `IteratorAggregate` 等众多接口
 - 这样 foreach 的时候，foreach 就只会去循环 `getIterator` 方法中的内容了
 ```php 
 // getIterator 方法
@@ -40,6 +40,11 @@ LengthAwarePaginator {#1318 ▼
 ```
 
 - 到这里应该恍然大悟了哟 XD
+
+#### [相关类文件位置]
+- LengthAwarePaginator | \xxx\web\vendor\laravel\framework\src\Illuminate\Pagination\LengthAwarePaginator.php
+- AbstractPaginator | \xxx\vendor\laravel\framework\src\Illuminate\Pagination\AbstractPaginator.php
+
 #### [参考资料]:
 - http://php.net/manual/zh/language.oop5.iterations.php
 - http://php.net/manual/zh/iteratoraggregate.getiterator.php
