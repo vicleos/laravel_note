@@ -54,3 +54,4 @@ LengthAwarePaginator {#1318 ▼
 - http://php.net/manual/zh/language.oop5.iterations.php
 - http://php.net/manual/zh/iteratoraggregate.getiterator.php
 - http://php.net/manual/zh/class.arrayiterator.php
+- https://segmentfault.com/a/1190000006022698
