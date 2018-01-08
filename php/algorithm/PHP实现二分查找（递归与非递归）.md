@@ -24,8 +24,8 @@ function binary(&$arr, $low, $top, $target){
     return false;
 }
 $arr = array(1,3,9,23,54);
-echo binary($arr, 0, sizeof($arr), 9);
-//2
+echo binary($arr, 0, sizeof($arr), 23);
+// 3
 ```
 ```php
 // 递归
@@ -43,6 +43,6 @@ function binaryRecursive(&$arr, $low, $top, $target){
     return binaryRecursive($arr, $low, $mid - 1, $target);
 }
 $arr = array(1,3,9,23,54);
-echo binaryRecursive($arr, 0, sizeof($arr), 9);
-//2
+echo binaryRecursive($arr, 0, sizeof($arr), 23);
+// 3
 ```
