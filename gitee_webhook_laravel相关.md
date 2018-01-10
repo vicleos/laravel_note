@@ -9,7 +9,7 @@
         Log::info('git web hook callback : '.json_encode($request->all(), JSON_UNESCAPED_UNICODE));
         // TODO 当回滚时，要避免直接执行git pull，需要人为控制
         // 仓库路径
-        $local = '/www/wwwroot/zgengine';
+        $local = '/www/wwwroot/yourwebsite';
 
         // 安全验证字符串，为空则不验证 Gitee 密码串, 暂不验证
         $token = '';
@@ -61,11 +61,11 @@
          * 3.在执行的命令后面加上2>&1可以输出详细信息，确定错误位置
          *
          * 4.git目录权限问题。比如：
-         * `fatal: Unable to create '/data/www/html/awaimai/.git/index.lock': Permission denied`
+         * `fatal: Unable to create '/www/wwwroot/yourwebsite/.git/index.lock': Permission denied`
          * 那就是PHP用户没有写权限，需要给目录授予权限:
-         * ``
-         * sudo chown -R :www /www/wwwroot/zgengine`
-         * sudo chmod -R g+w /www/wwwroot/zgengine
+         * ``bash
+         * sudo chown -R :www /www/wwwroot/yourwebsite
+         * sudo chmod -R g+w /www/wwwroot/yourwebsite
          * ```
          */
         echo shell_exec("cd {$local} && git pull 2>&1");
