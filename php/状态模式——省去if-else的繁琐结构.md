@@ -116,3 +116,9 @@ public class StateController implements State {
 - 优点： State模式将所有与一个特定的状态相关的行为都放进一个状态对象中，他提供了一个更好的方法来组织与特定状态相关的代码，将繁琐的状态判断转换成结构清晰的状态类族，在避免代码膨胀的同事也保证了可扩展性与可维护性。
 
 - 缺点： 增加了系统类和对象的个数。
+
+- http://blog.csdn.net/laner0515/article/details/7383872
+
+- http://blog.csdn.net/ghevinn/article/details/24792071
+
+- http://blog.csdn.net/kai763253075/article/details/52496741
