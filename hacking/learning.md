@@ -1,0 +1,3 @@
+- http://open.freebuf.com/
+- http://www.kali.org.cn/
+- https://www.52pojie.cn/
