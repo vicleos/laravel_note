@@ -1,0 +1,6 @@
+- http://www.cnblogs.com/LBSer/category/475421.html
+- https://github.com/taoismCoder/laravel_geohash
+- https://tech.meituan.com/lucene-distance.html
+- https://www.cnblogs.com/zhenbianshu/p/6863405.html
+- http://www.cocoachina.com/programmer/20170821/20309.html
+- http://blog.csdn.net/hel12he/article/details/48208927
