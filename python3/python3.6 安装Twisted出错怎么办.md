@@ -20,16 +20,17 @@ pip install  Twisted‑17.9.0‑cp36‑cp36m‑win32.whl
 ```
 成功了！
 ```
-E:\sundry>pip install Twisted-17.9.0-cp36-cp36m-win32.whl
-Processing e:\sundry\twisted-17.9.0-cp36-cp36m-win32.whl
-Requirement already satisfied: Automat>=0.3.0 in e:\program files\python\python36-32\lib\site-packages (from Twisted==17.9.0)
-Requirement already satisfied: constantly>=15.1 in e:\program files\python\python36-32\lib\site-packages (from Twisted==17.9.0)
-Requirement already satisfied: hyperlink>=17.1.1 in e:\program files\python\python36-32\lib\site-packages (from Twisted==17.9.0)
-Requirement already satisfied: zope.interface>=4.0.2 in e:\program files\python\python36-32\lib\site-packages (from Twisted==17.9.0)
-Requirement already satisfied: incremental>=16.10.1 in e:\program files\python\python36-32\lib\site-packages (from Twisted==17.9.0)
-Requirement already satisfied: attrs in e:\program files\python\python36-32\lib\site-packages (from Automat>=0.3.0->Twisted==17.9.0)
-Requirement already satisfied: six in e:\program files\python\python36-32\lib\site-packages (from Automat>=0.3.0->Twisted==17.9.0)
-Requirement already satisfied: setuptools in e:\program files\python\python36-32\lib\site-packages (from zope.interface>=4.0.2->Twisted==17.9.0)
+D:\python>pip install Twisted-17.9.0-cp36-cp36m-win_amd64.whl
+Processing d:\python\twisted-17.9.0-cp36-cp36m-win_amd64.whl
+Requirement already satisfied: Automat>=0.3.0 in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from Twisted==17.9.0)
+Requirement already satisfied: hyperlink>=17.1.1 in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from Twisted==17.9.0)
+Requirement already satisfied: incremental>=16.10.1 in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from Twisted==17.9.0)
+Requirement already satisfied: constantly>=15.1 in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from Twisted==17.9.0)
+Requirement already satisfied: zope.interface>=4.0.2 in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from Twisted==17.9.0)
+Requirement already satisfied: six in c:\users\xxx\appdata\roaming\python\python36\site-packages (from Automat>=0.3.0->Twisted==17.9.0)
+Requirement already satisfied: attrs in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from Automat>=0.3.0->Twisted==17.9.0)
+Requirement already satisfied: idna>=2.5 in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from hyperlink>=17.1.1->Twisted==17.9.0)
+Requirement already satisfied: setuptools in c:\users\xxx\appdata\local\programs\python\python36\lib\site-packages (from zope.interface>=4.0.2->Twisted==17.9.0)
 Installing collected packages: Twisted
 Successfully installed Twisted-17.9.0
 ```
