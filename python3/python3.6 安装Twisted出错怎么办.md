@@ -8,18 +8,6 @@
 
 - 我发现了Python扩展包的非官方Windows二进制文件里有：
 - https://www.lfd.uci.edu/~gohlke/pythonlibs/ 搜索 twisted
-- Twisted, an event-driven networking engine.
-```
-Twisted‑17.9.0‑cp27‑cp27m‑win32.whl
-Twisted‑17.9.0‑cp27‑cp27m‑win_amd64.whl
-Twisted‑17.9.0‑cp34‑cp34m‑win32.whl
-Twisted‑17.9.0‑cp34‑cp34m‑win_amd64.whl
-Twisted‑17.9.0‑cp35‑cp35m‑win32.whl
-Twisted‑17.9.0‑cp35‑cp35m‑win_amd64.whl
-Twisted‑17.9.0‑cp36‑cp36m‑win32.whl
-Twisted‑17.9.0‑cp36‑cp36m‑win_amd64.whl
-```
-- 赶紧的，到https://www.lfd.uci.edu/~gohlke/pythonlibs/ 
 - 下载了 Twisted‑17.9.0‑cp36‑cp36m‑win_amd64.whl
 
 - 执行：
