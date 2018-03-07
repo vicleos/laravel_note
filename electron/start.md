@@ -18,3 +18,11 @@ D:\client\electron-quick-start> npm start
 D:\client\electron-quick-start> npm -g install electron-packager
 D:\client\electron-quick-start> electron-packager . --platfrom-win32 --arch-x64
 ```
+- 完毕
+```
+# 打包好的 exe 文件就在 electron-quick-start-win32-x64 文件夹中
+# 运行 electron-quick-start.exe 即可
+```
+
+- 备注：
+> 只有在 npm start 的时候，才会出现顶部的菜单栏，如File, Edit, View, Window 之类的
