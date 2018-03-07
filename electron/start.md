@@ -41,7 +41,7 @@ D:\client\electron-quick-start> electron-packager . --platfrom-win32 --arch-x64
   // }))
   
   # 用这句话就可以打开网页了
-  mainWindow.loadURL('https://mubiu.com/dashboard');
+  mainWindow.loadURL('https://mubiu.com');
 
   ....
 ```  
