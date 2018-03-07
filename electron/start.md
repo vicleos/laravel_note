@@ -45,3 +45,5 @@ D:\client\electron-quick-start> electron-packager . --platfrom-win32 --arch-x64
 
   ....
 ```  
+- 图例：
+![](https://github.com/vicleos/laravel_note/blob/master/electron/electron_start.png)
