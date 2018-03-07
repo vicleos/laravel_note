@@ -28,7 +28,6 @@ D:\client\electron-quick-start> electron-packager . --platfrom-win32 --arch-x64
 - 备注：
 > 只有在 npm start 的时候，才会出现顶部的菜单栏，如File, Edit, View, Window 之类的
 
-====
 #### 如何打开网页？
 - 打开 main.js，找到 createWindow() 方法
 ```javascript
