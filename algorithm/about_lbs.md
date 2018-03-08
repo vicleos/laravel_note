@@ -11,6 +11,7 @@
 
 ##### mysql 根据 geohash值 和 多边形节点(GIS) 获取多边形内的坐标
 - 表中的 lng, lat 存储着经纬度坐标
+- 注意：POLYGON 中的坐标节点要闭合，也就是第一个坐标要和最后一个坐标相同
 ```sql
 select * from (SELECT
 	*, ST_GeomFromText (
