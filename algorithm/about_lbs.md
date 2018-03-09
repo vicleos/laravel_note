@@ -25,3 +25,8 @@ FROM
 WHERE
 	rst.gh LIKE 'ww0tt%') as rst_list where st_contains(rst_list.ste, rst_list.rpt) = 1
 ```
+##### 逻辑思路：
+- app获取多边形的(maxLat, minLat, maxLng, maxLng) 和 多边形节点(polygon:[x,x,x,x,x,x]) 发送给接口
+- 第一次筛选：根据四个值获取正方形的中心点，计算中心点的geohash值，如：ww0ttxwjby
+- 计算需要的参数：中心点geohash值 、 polygon 节点坐标数组(需要闭合，p[0] = p[n])、需要的精度级别、geohash检测精度(like '多少位%')
+- 将参数放入上面sql语句中执行，获取最终的筛选结果
