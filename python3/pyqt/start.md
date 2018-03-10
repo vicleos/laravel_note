@@ -1,0 +1,2 @@
+- 完美安装 Anaconda3 + PyQt5 + Eric6 | http://blog.csdn.net/weiaitaowang/article/details/52045360
+- 快速熟悉 PyQt5 与 Eric6 的极速 GUI 开发 | http://blog.csdn.net/mengtianwxs/article/details/53406912
