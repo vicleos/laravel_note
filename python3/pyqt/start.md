@@ -1,7 +1,6 @@
 - 完美安装 Anaconda3 + PyQt5 + Eric6 | http://blog.csdn.net/weiaitaowang/article/details/52045360
 - 快速熟悉 PyQt5 与 Eric6 的极速 GUI 开发 | http://blog.csdn.net/mengtianwxs/article/details/53406912
 
-> PyQt5: 这里折腾了很久，上面的攻略中用到的Pyqt5.6 exe是适配python3.5的，现在Anaconda已经python3.6了，如果安装这个exe，会导致Anaconda Nevigator 和spyder打不开，经过几番询问度娘和谷哥，发现从Pyqt5.7开始，不会再提供exe的版本，这条路彻底走不通了，可以用下面的方法:
 
 > pip install pyqt5
 
