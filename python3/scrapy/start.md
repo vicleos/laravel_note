@@ -1,8 +1,9 @@
 from: https://www.cnblogs.com/kongzhagen/p/6549053.html
-
+```bash
 scrapy startproject movie
 cd movie
 scrapy genspider meiju meijutt.com
+```
 
 #### 文件说明：
 
@@ -13,6 +14,7 @@ scrapy genspider meiju meijutt.com
 - spiders      爬虫目录，如：创建文件，编写爬虫规则
 
 #### 执行爬虫:
-
+```bash
 cd movie
 scrapy crawl meiju --nolog
+```
