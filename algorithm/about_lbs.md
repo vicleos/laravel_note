@@ -30,3 +30,9 @@ WHERE
 - 第一次筛选：根据四个值获取正方形的中心点，计算中心点的geohash值，如：ww0ttxwjby
 - 计算需要的参数：中心点geohash值 、 polygon 节点坐标数组(需要闭合，p[0] = p[n])、需要的精度级别、geohash检测精度(like '多少位%')
 - 将参数放入上面sql语句中执行，获取最终的筛选结果
+
+##### 另外一种
+- app获取多边形的(maxLat, minLat, maxLng, maxLng) 发送给接口
+- 第一次筛选：根据四个值获取正方形的中心点，计算中心点的geohash值，如：ww0ttxwjby
+- 返回给APP对应的查询结果(like '多少位%')
+- app对结果进行筛选，用sdk中的检测点是否在多边形内，去除多边形外的点
