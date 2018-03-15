@@ -14,7 +14,9 @@ import cv2
 # mask.png 与src.jpg尺寸相同并且黑色背景，白色区域是要处理水印的区域
 # https://docs.opencv.org/master/df/d3d/tutorial_py_inpainting.html#gsc.tab=0
 src = cv2.imread('src.jpg')  # 默认的彩色图(IMREAD_COLOR)方式读入原始图像
-mask = cv2.imread('mask.png', cv2.IMREAD_GRAYSCALE)  # 灰度图(IMREAD_GRAYSCALE)方式读入水印蒙版图像
+
+#mask = cv2.imread('mask.png', cv2.IMREAD_GRAYSCALE)  # 灰度图(IMREAD_GRAYSCALE)方式读入水印蒙版图像
+mask = cv2.imread('mask.png', 0)
 
 # 参数：目标修复图像; 蒙版图（定位修复区域）; 选取邻域半径; 修复算法(包括INPAINT_TELEA/INPAINT_NS， 前者算法效果较好)
 dst = cv2.inpaint(src, mask, 3, cv2.INPAINT_TELEA)
