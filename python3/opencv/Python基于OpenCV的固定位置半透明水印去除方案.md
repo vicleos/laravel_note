@@ -1,4 +1,4 @@
-from: https://my.oschina.net/u/2400083/blog/732321
+from : https://docs.opencv.org/master/df/d3d/tutorial_py_inpainting.html#gsc.tab=0
 
 OpenCV基础
 OpenCV（Open Source Computer Vision Library）是一个跨平台计算机视觉库，实现了图像处理和计算机视觉方面的很多通用算法
