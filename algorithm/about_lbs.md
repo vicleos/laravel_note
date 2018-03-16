@@ -36,3 +36,8 @@ WHERE
 - 第一次筛选：根据四个值获取正方形的中心点，计算中心点的geohash值，如：ww0ttxwjby
 - 返回给APP对应的查询结果(like '多少位%')
 - app对结果进行筛选，用sdk中的检测点是否在多边形内，去除多边形外的点
+
+
+```sql
+SELECT id,name,lng, lat, ST_GeoHash ( lng, lat, 9 ) AS gh FROM spider_house where id > 0 HAVING gh like 'ww0t%'
+```
