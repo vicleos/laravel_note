@@ -41,7 +41,19 @@ WHERE
 ```sql
 SELECT id,name,lng, lat, ST_GeoHash ( lng, lat, 9 ) AS gh FROM spider_house where id > 0 HAVING gh like 'ww0t%'
 ```
-##### 最终使用的语句
+##### 最终使用的语句，最大lat,lng、最小lat,lng
 ```sql
-SELECT id,name,lng, lat, ST_GeomFromText ('POLYGON((113.6072156230005 34.91586596173386,113.6072156230005 34.88135338391958,113.629493599648 34.88135338391958,113.629493599648 34.91586596173386,113.6072156230005 34.91586596173386))') as ste, ST_PointFromGeoHash(ST_GeoHash ( lng, lat, 10 ), 0) as rpt FROM spider_house where id > 0 HAVING st_contains(ste, rpt) = 1
+SELECT
+	id,
+	NAME,
+	lng,
+	lat,
+	ST_GeomFromText ( 'POLYGON((113.6072156230005 34.91586596173386,113.6072156230005 34.88135338391958,113.629493599648 34.88135338391958,113.629493599648 34.91586596173386,113.6072156230005 34.91586596173386))' ) AS ste,
+	ST_PointFromGeoHash ( ST_GeoHash ( lng, lat, 10 ), 0 ) AS rpt 
+FROM
+	spider_house 
+WHERE
+	id > 0 
+HAVING
+	st_contains ( ste, rpt ) = 1
 ```
