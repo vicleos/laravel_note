@@ -20,3 +20,12 @@ scrapy genspider meiju meijutt.com
 cd movie
 scrapy crawl meiju --nolog
 ```
+
+#### 小问题：
+在使用 Visual Studio Code 时，在 items.py 中的 import scrapy 语句，pylint 报出问题 [pylint] E0401:Unable to import 'scrapys'
+这应该是应为选择 python 的解析器不对，Ctrl+Shift+P 打开控制台，输入 `>python: s` 在下拉菜单中点击 `Python: Select Interpreter`，
+现在显示目前选择的解析器是 `Anaconda3` 的，所以我们改为选择系统的 python3 程序。
+然后，就好了
+
+- 参考：https://code.visualstudio.com/docs/python/environments
+
