@@ -34,6 +34,7 @@ Value Encoding  Value Encoding  Value Encoding  Value Encoding
 ### 【 62进制与十进制的映射 】
 #### 62进制转10进制
 还记得二进制转十进制的算法么，从右到左用二进制的每个数去乘以2的相应次方，次方要从0开始。62进制转10进制也类似，从右往左每个数*62的N次方，N从0开始。
+- 关于JAVA的多态  https://www.zhihu.com/question/30082151
 ```java
     public static long toBase10(String str) {
         //从右边开始
