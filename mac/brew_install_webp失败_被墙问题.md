@@ -20,3 +20,6 @@ brew edit webp
     url "http://downloads.webmproject.org/releases/webp/libwebp-1.0.0.tar.gz"
     sha256 "84259c4388f18637af3c5a6361536d754a5394492f91be1abc2e981d4983225b"
 ```
+
+- 参考：
+https://www.jianshu.com/p/a9271e522edc
