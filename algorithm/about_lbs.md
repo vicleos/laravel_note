@@ -57,3 +57,9 @@ WHERE
 HAVING
 	st_contains ( ste, rpt ) = 1
 ```
+
+#### mysql 获取两点之间的距离
+```
+SELECT subway_id, name, city_id, parent_id, lng, lat, (st_distance_here ( point ( 119.335745, 26.148543 ), point ( lng, lat ) )) * 111.195 AS distance FROM subway WHERE city_id = 350100 AND parent_id > 0 HAVING distance <= 1.5 ORDER BY distance ASC
+```
+
