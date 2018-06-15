@@ -1,0 +1,5 @@
+- http://www.hewebgl.com/article/getarticle/50
+- http://zhangyongbluesky.blog.163.com/blog/static/1831941620113155739840/
+- https://github.com/mrdoob/three.js
+- https://threejs.org/docs/
+- three.js-dev/editor/index.html // three.js 带的 3D建模工具
