@@ -7,7 +7,7 @@
             <span slot="label"><i class="el-icon-menu"></i> 已添加菜品</span>
             <el-container>
                 <el-main>
-                    <div v-if="!checkedMenu">
+                    <div>
                         <div class="mb10">请在套餐中选择商品，即可快速加入套餐中</div>
                         <a class="btn btn-sm btn-info text-white" @click="openComboMenu()">选择菜单商品</a>
                     </div>
@@ -44,12 +44,12 @@ let vue = new Vue({
   }
 }).$mount('#comboMenu');
 ```
-##### 主要步骤：
+### 主要步骤：
 1. 在自定义 `label` 中指定某选项的 `ref` 名称，如：`comboMenu`
 2. 在外部按钮添加 `@click="openComboMenu()"` 方法
 3. 方法中执行 `this.$refs.comboMenu.offsetParent.click();` 来触发 tab 选项的 `click` 事件
 
-##### 参考资料：
+### 参考资料：
 - https://cn.vuejs.org/v2/api/#vm-refs
 - https://cn.vuejs.org/v2/api/#ref
 - https://github.com/ElemeFE/element/blob/076d4303f7b2313f0f9c72be8b53d92ebddfd199/packages/tabs/src/tabs.vue#L122
