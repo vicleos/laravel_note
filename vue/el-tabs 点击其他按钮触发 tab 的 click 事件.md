@@ -30,20 +30,26 @@
 </div>
 ```
 
+====
+
 ```javascript
 let vue = new Vue({
   el: "#my_test",
   data: {},
   methods:{
     openComboMenu:function(){
+      console.log(this.$refs);
       this.$refs.comboMenu.offsetParent.click();
     }
   }
 }).$mount('#comboMenu');
 ```
+##### 主要步骤：
+1. 在自定义 `label` 中指定某选项的 `ref` 名称，如：`comboMenu`
+2. 在外部按钮添加 `@click="openComboMenu()"` 方法
+3. 方法中执行 `this.$refs.comboMenu.offsetParent.click();` 来触发 tab 选项的 `click` 事件
 
-
-- 参考资料：
+##### 参考资料：
 - https://cn.vuejs.org/v2/api/#vm-refs
 - https://cn.vuejs.org/v2/api/#ref
 - https://github.com/ElemeFE/element/blob/076d4303f7b2313f0f9c72be8b53d92ebddfd199/packages/tabs/src/tabs.vue#L122
