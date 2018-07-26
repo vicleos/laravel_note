@@ -1,0 +1,3 @@
+- electron builder 打包
+- https://newsn.net/say/electron-vue-demo-win-packager.html [win环境，利用packager构建electron+vue的demo]
+- https://blog.csdn.net/hr541659660/article/details/78731394
