@@ -17,7 +17,7 @@ InnoDB: and force InnoDB to continue crash recovery here.
 
 #### 结局方案
 ```
-在 my.cnf 中 `[mysqld]` 下面加入一行
+在 my.cnf 中 [mysqld] 下面加入一行
 innodb_force_recovery = 1
 这时就能启动 mysql 了，启动以后，检查下数据库可以正常打开后，再将这行去掉就可以了
 ```
