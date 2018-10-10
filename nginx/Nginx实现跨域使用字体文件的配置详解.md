@@ -3,6 +3,7 @@
 - 子域名访问根域名的CSS时，发现字体无法显示，在确保CSS和Font字体的路径加载无问题后，基本确定是因为跨域的问题。
 
 #### 解决方案:
+- 路径如：/etc/nginx/sites-available
 - 通过Nginx模块Http_Headers_Module来添加Access-Control-Allow-Origin允许的地址
 
 - 修改 `vhost` 中的 `xxx.conf`文件内容，添加下面的内容：
